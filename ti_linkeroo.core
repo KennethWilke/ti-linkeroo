@@ -6,11 +6,12 @@ filesets:
   rtl:
     files:
       - top.sv
+      - manta.v
     file_type: systemVerilogSource
   
   pico_ice:
     files:
-      - test/pico_ice/pinout.pcf : {file_type : PCF}
+      - pinout.pcf : {file_type : PCF}
 
 targets:
   default: &default

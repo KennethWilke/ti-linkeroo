@@ -1,0 +1,30 @@
+---
+cores:
+  io_pins:
+    type: io
+
+    inputs:
+      sw2: 1
+
+    outputs:
+      r: 1
+      g: 1
+      b: 1
+
+  logic_analyzer:
+    type: logic_analyzer
+    sample_depth: 4096
+    trigger_location: 1
+
+    probes:
+      tip: 1
+      ring: 1
+
+    triggers:
+      - tip FALLING
+      - ring FALLING
+
+uart:
+  port: "/dev/ttyACM1"
+  baudrate: 115_200
+  clock_freq: 12_000_000
